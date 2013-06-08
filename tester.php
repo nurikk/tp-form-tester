@@ -46,7 +46,7 @@ function find_and_replace_old_form($insert, $to)
 
 function find_replace_tag($insert, $to, $tag, $before = false)
 {
-    $find_pattern = '/<' . $tag . '[^>]*?>/';
+    $find_pattern = '/<' . $tag . '[^>]*?>/is';
     if ($before) {
         $insert = $insert . '$0';
     } else {
@@ -58,6 +58,6 @@ function find_replace_tag($insert, $to, $tag, $before = false)
 function prepare_base($html, $url)
 {
     $base_tag = '<base href="http://' . parse_url($url, PHP_URL_HOST) . '/">';
-    $find_pattern = '/<head[^>]*?>/';
+    $find_pattern = '/<head[^>]*?>/is';
     return preg_replace($find_pattern, $base_tag, $html);
 }
