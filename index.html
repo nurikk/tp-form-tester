@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+<form method="POST" action="tester.php" target="_blank">
+  <label>Урл: <input type="url" name="url"></label><br>
+  <label>Вид вставки: <select name="replacement_type">
+    <option value="replace" selected>Заменить старую форму</option>
+    <option value="body_begin">После открывающего body</option>
+    <option value="body_end">После закрывающего body</option>
+  </select></label>
+  <br>
+  <input type="submit" value="GO!"><br>
+  <textarea name="code" cols="80" rows="15"></textarea>
+
+</form>
+</body>
+</html>
