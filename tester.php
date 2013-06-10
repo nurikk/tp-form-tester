@@ -57,7 +57,7 @@ function find_replace_tag($insert, $to, $tag, $before = false)
 
 function prepare_base($html, $url)
 {
-    $base_tag = '<base href="http://' . parse_url($url, PHP_URL_HOST) . '/">';
+    $base_tag = '$0<base href="http://' . parse_url($url, PHP_URL_HOST) . '/">';
     $find_pattern = '/<head[^>]*?>/is';
     return preg_replace($find_pattern, $base_tag, $html);
 }
