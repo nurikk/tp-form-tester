@@ -1,4 +1,5 @@
 <?php
+header('X-XSS-Protection: 0');
 $DATA_SOURCE = $_POST;
 if ($DATA_SOURCE) {
     $url = $DATA_SOURCE['url'];
